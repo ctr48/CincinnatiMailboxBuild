@@ -59,6 +59,16 @@ header .container {
     align-items: center;
 }
 
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    max-height: 40px;
+    margin-right: 1rem;
+}
+
 header h1 {
     font-size: 1.5rem;
     margin: 0;
@@ -88,24 +98,45 @@ nav ul li a:hover {
 
 /* Hero Section */
 #hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/1600x900/?mailbox');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
+    background-color: #f8f9fa;
+    min-height: 100vh;
     display: flex;
     align-items: center;
-    text-align: center;
-    color: #fff;
+    padding: 6rem 0 3rem;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 #hero h2 {
     font-size: 3rem;
     margin-bottom: 1rem;
+    color: #2c3e50;
 }
 
 #hero p {
     font-size: 1.5rem;
     margin-bottom: 2rem;
+    color: #34495e;
 }
 
 .cta-button {
@@ -126,6 +157,56 @@ nav ul li a:hover {
 /* Sections */
 section {
     padding: 5rem 0;
+}
+
+/* About Section */
+.about-section {
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.about-content {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text ul {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+}
+
+.about-features {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.feature {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+}
+
+.feature i {
+    font-size: 2.5rem;
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.feature h3 {
+    margin-bottom: 0.5rem;
 }
 
 /* Services Grid */
@@ -244,15 +325,26 @@ footer {
 @media (max-width: 768px) {
     header .container {
         flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo-container {
+        margin-bottom: 1rem;
     }
 
     nav ul {
-        margin-top: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     nav ul li {
-        margin-left: 0.75rem;
-        margin-right: 0.75rem;
+        margin-left: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .hero-content {
+        flex-direction: column-reverse;
+        text-align: center;
     }
 
     #hero h2 {
@@ -261,6 +353,14 @@ footer {
 
     #hero p {
         font-size: 1.25rem;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-features {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -279,5 +379,13 @@ footer {
 
     .service-grid, .gallery, .location-grid {
         grid-template-columns: 1fr;
+    }
+
+    .logo-container img {
+        max-height: 30px;
+    }
+
+    header h1 {
+        font-size: 1.25rem;
     }
 }
