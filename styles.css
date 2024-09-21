@@ -7,6 +7,51 @@ body, h1, h2, h3, h4, p, figure, blockquote, dl, dd {
     margin: 0;
 }
 
+/* General styling for the section */
+.widget-section {
+    padding: 0px;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 0px; /* Remove any unnecessary bottom margin */
+}
+
+/* Container to center the widget */
+.widget-section .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0; /* Remove padding to ensure no extra space */
+}
+
+/* Banner styling */
+.widget-banner {
+    background-color: #28a745; /* Bright green background */
+    color: white; /* White text color */
+    border-radius: 8px; /* Rounded corners */
+    padding: px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for a subtle effect */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0; /* Set bottom margin to 0 to reduce extra spacing */
+}
+
+/* Message inside the banner */
+#install-message {
+    font-size: 1.5em; /* Slightly smaller, but still bold text */
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Add a hover effect to make the widget more exciting */
+.widget-banner:hover {
+    background-color: #218838; /* Slightly darker green on hover */
+    cursor: pointer;
+}
+
+
+
+
 /* Base Styles */
 body {
     font-family: 'Roboto', sans-serif;
@@ -102,14 +147,14 @@ nav ul li a:hover {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 6rem 0 3rem;
+    padding: 0rem 0 0rem;
 }
 
 .hero-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 2rem;
+    gap: 0rem;
 }
 
 .hero-text {
@@ -156,7 +201,7 @@ nav ul li a:hover {
 
 /* Sections */
 section {
-    padding: 5rem 0;
+    padding: 2cm 0;
 }
 
 /* About Section */
@@ -207,31 +252,6 @@ section {
 
 .feature h3 {
     margin-bottom: 0.5rem;
-}
-
-/* Services Grid */
-.service-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-}
-
-.service-item {
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.service-item:hover {
-    transform: translateY(-5px);
-}
-
-.service-item i {
-    font-size: 2.5rem;
-    color: #3498db;
-    margin-bottom: 1rem;
 }
 
 /* Gallery */
